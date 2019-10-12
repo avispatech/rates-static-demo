@@ -1,99 +1,36 @@
 ---
 # Feel free to add content and custom Front Matter to this file.
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-title: Tasas de cambio
-layout: default
+title: Unidad de Fomento (UF)
+layout: sessions
 ---
 
-<div class="row mb-5">
-  <div class="col">
-    <div class="card-deck">
-      <div class="card">
-        <div class="card-header">
-          <h2>UF</h2>
-        </div>
-        <div class="card-body">
-          {% for member in site.data.uf %}
-          <p class="display-4 text-right">${{member.oct}}</p>
-          {% break %}
-          {% endfor %}
-        </div>
-        <div class="card-footer">
-          {% for post in site.categories['uf'] %}
-            <a href="{{post.url}}" class="btn btn-primary">Ver histórico</a>
-            {% break %}
-          {% endfor %}
-        </div>
+<div class="row justify-content-center">
+  <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+    <h1 class="display-1">Rater</h1>
+    <div class="card">
+      <div class="card-body">
+        <form method="get" action="/">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+              placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          </div>
+          <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+        </form>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <h2>Dólar</h2>
-        </div>
-        <div class="card-body">
-          {% for member in site.data.usd %}
-          <p class="display-4 text-right">${{member.oct}}</p>
-          {% break %}
-          {% endfor %}
-        </div>
-        <div class="card-footer">
-          {% for post in site.categories['usd'] %}
-            <a href="{{post.url}}" class="btn btn-primary">Ver histórico</a>
-            {% break %}
-          {% endfor %}
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <h2>Euro</h2>
-        </div>
-        <div class="card-body">
-          {% for member in site.data.eur %}
-          <p class="display-4 text-right">${{member.oct}}</p>
-          {% break %}
-          {% endfor %}
-        </div>
-        <div class="card-footer">
-            {% for post in site.categories['eur'] %}
-            <a href="{{post.url}}" class="btn btn-primary">Ver histórico</a>
-            {% break %}
-          {% endfor %}
-        </div>
+      <div class="card-footer">
+        <small><strong>Nota:</strong> este es un sitio dummy, no hay sistema de usuarios, es para que puedas probar el login.</small>
       </div>
     </div>
   </div>
-</div>
-
-<div class="row">
-  <div class="col-6">
-    <div class="jumbotron">
-      <h2>Datos más recientes</h2>
-      <ul>
-          {% for post in site.posts limit:6 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }} - {{ post.subtitle}}</a>
-          </li>
-          {% endfor %}
-        </ul>
-    </div>
-  </div>
-  <div class="col-3">
-    <div class="jumbotron">
-      <h2>Monedas</h2>
-      <ul>
-        {% for category in site.categories %}
-          <li><a href="{{ site.url }}/category/{{ category | first | slugify }}/index.html">{{ category | first | upcase }}</a></li>
-        {% endfor %}
-      </ul>
-    </div>
-  </div>
-  <div class="col-3">
-      <div class="jumbotron">
-        <h2>Meses</h2>
-        <ul>
-          {% for tag in site.tags %}
-            <li>{{tag[0]}}</li>
-          {% endfor %}
-        </ul>
-      </div>
-    </div>
 </div>
