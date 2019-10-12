@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<div class="row">
+  {% for post in page.posts %}
+  <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-4">
+    <div class="card">
+      <div class="card-header">
+        <p class="text-right">{{post.title}}</p>
+      </div>
+      <div class="card-body">
+        <h2>{{post.subtitle}}</h2>
+
+        <a href="{{post.url}}" class="btn btn-block btn-primary">Ver histórico</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

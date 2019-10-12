@@ -1,0 +1,45 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+title: Unidad de Fomento (UF)
+layout: default
+---
+
+<div class="row">
+  <div class="col-12 col-md-6 col-lg-8">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th>Día</th>
+            <th>Valor</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for member in site.data.uf %}
+          <tr>
+            <th>{{member.day}}</th>
+            <td>$ {{member['oct']}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+  </div>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card">
+      <div class="list-group list-group-flush">
+        <a class="list-group-item">Enero</a>
+        <a class="list-group-item">Febrero</a>
+        <a class="list-group-item">Marzo</a>
+        <a class="list-group-item">Abril</a>
+        <a class="list-group-item">Mayo</a>
+        <a class="list-group-item">Junio</a>
+        <a class="list-group-item">Julio</a>
+        <a class="list-group-item">Agosto</a>
+        <a class="list-group-item">Septiembre</a>
+        <a class="list-group-item">Octubre</a>
+        <a class="list-group-item">Noviembre</a>
+        <a class="list-group-item">Diciembre</a>
+      </div>
+    </div>
+  </div>
+</div>

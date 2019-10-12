@@ -1,0 +1,39 @@
+<h2 class="mb-4">{{page.subtitle}}</h2>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-8">
+      <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th >Día</th>
+              <th>Valor</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for member in site.data[include.currency] %}
+            <tr>
+              <th>{{member.day}}</th>
+              <td>$ {{member[include.month]}}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card">
+        <div class="card-body">
+          <p>Ver información de otros meses</p>
+        </div>
+        <div class="list-group list-group-flush">
+        {% for post in site.categories[include.currency] %}
+          {% if page.url == post.url %}
+          <strong class="list-group-item">
+            {{post.subtitle}}
+          </strong>
+          {% else %}
+          <a class="list-group-item" href="{{ post.url }}">{{ post.subtitle }}</a>
+          {% endif %}
+        {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
