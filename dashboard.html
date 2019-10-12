@@ -64,7 +64,7 @@ layout: default
 </div>
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-12 col-lg-6">
     <div class="jumbotron">
       <h2>Datos más recientes</h2>
       <ul>
@@ -76,7 +76,7 @@ layout: default
         </ul>
     </div>
   </div>
-  <div class="col-3">
+  <div class="col-6 col-lg-3">
     <div class="jumbotron">
       <h2>Monedas</h2>
       <ul>
@@ -86,7 +86,7 @@ layout: default
       </ul>
     </div>
   </div>
-  <div class="col-3">
+  <div class="col-6 col-lg-3">
       <div class="jumbotron">
         <h2>Meses</h2>
         <ul>
@@ -97,3 +97,23 @@ layout: default
       </div>
     </div>
 </div>
+
+<style>
+  @media screen and (min-width: 576px) and (max-width: 768px){
+    .card-body{
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .display-4 {
+      font-size: 1.5rem;
+    }
+  }
+  @media screen and (min-width: 769px) and (max-width: 1200px){
+    .card-body {
+      padding: 1.25rem 0.125rem;
+    }
+    .display-4 {
+      font-size: 2.5rem;
+    }
+  }
+</style>
