@@ -7,43 +7,50 @@ layout: default
 
 <div class="row">
   <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <h2>UF</h2>
+    <div class="card-deck">
+      <div class="card">
+        <div class="card-header">
+          <h2>UF</h2>
+        </div>
+        <div class="card-body">
+          {% for member in site.data.uf %}
+          <p class="display-4 text-right">${{member.value}}</p>
+          <p class="display-4 text-right">{{val}}</p>
+          {% break %}
+          {% endfor %}
+        </div>
+        <div class="card-footer">
+          <a href="/uf" class="btn btn-primary">Ver histórico</a>
+        </div>
       </div>
-      <div class="card-body">
-        <p class="display-4">$28.076</p>
+      <div class="card">
+        <div class="card-header">
+          <h2>Dólar</h2>
+        </div>
+        <div class="card-body">
+          {% for member in site.data.usd %}
+          <p class="display-4 text-right">${{member.value}}</p>
+          {% break %}
+          {% endfor %}
+        </div>
+        <div class="card-footer">
+          <a href="/usd" class="btn btn-primary">Ver histórico</a>
+        </div>
       </div>
-      <div class="card-footer">
-        <a href="/uf" class="btn btn-primary">Ver histórico</a>
+      <div class="card">
+        <div class="card-header">
+          <h2>Euro</h2>
+        </div>
+        <div class="card-body">
+          {% for member in site.data.eur %}
+          <p class="display-4 text-right">${{member.value}}</p>
+          {% break %}
+          {% endfor %}
+        </div>
+        <div class="card-footer">
+          <a href="/eur" class="btn btn-primary">Ver histórico</a>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <h2>Dólar</h2>
-      </div>
-      <div class="card-body">
-        <p class="display-4">$734</p>
-      </div>
-      <div class="card-footer">
-        <a href="/usd" class="btn btn-primary">Ver histórico</a>
-      </div>
-    </div>
-  </div>
-  <div class="col">
-    <div class="card">
-      <div class="card-header">
-        <h2>Euro</h2>
-      </div>
-      <div class="card-body">
-        <p class="display-4">$780</p>
-      </div>
-      <div class="card-footer">
-        <a href="/eur" class="btn btn-primary">Ver histórico</a>
-      </div>
-    </div>
-  </div>
-
 </div>
